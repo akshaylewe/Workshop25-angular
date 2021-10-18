@@ -1,0 +1,11 @@
+body{
+    display: grid;
+    margin-top: 50px;
+    place-items: center;
+    
+}
+
+.bcd {
+    font-weight: 600;
+
+}

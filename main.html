@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://unsplash.it/30/30" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+
+<body ng-app="Factory-Training" background="omg.jpg">
+
+    <h1 style="color: red ;">
+        <marquee> Workshop25</marquee>
+    </h1>
+    
+    <div>
+
+        <!-- -------------------------------------Converting into bold ---------------------------- -->
+        <div>
+           <b><h1 style="color:purple;"> Converting Text into Bold</h1></b> 
+            
+            <input type="text" ng-model="abc" style="margin-left: 100px;">
+            <h1  class="bcd"  ng-bind="abc" style="text-align: center;"></h1>
+        </div>
+
+        <!-- -------------------------------------Generating a random number ---------------------------- -->
+        <div>
+            <h1 style="text-align: center; color:purple"> Generating a Random Numbers </h1>
+            <p style="text-align: center;"><button onclick="random();"
+                    style="font-family: 'Courier New', Courier, monospace; color: red; background-color:black; cursor: pointer;"> Click here to Generate Random
+                    numbers</button></p>
+            <p style="text-align: center;" id="number"> </p>
+        </div>
+        <!-- -------------------------------------Epoch Time into String type ---------------------------- -->
+        <h1 style="text-align: center; color:purple"> Enter Epoch Time
+        </h1>
+        <div>
+         <h3>   <label for="epochTime">Enter Epoch Time</label><br> </h3>
+            <br>    
+            <input type="datetime-local" id="epochTime" ng-model="epochTime" style="margin-left: 100px;">
+            <br>
+            <p style="text-align: center;">{{ epochTime*1000 | date: 'yyyy-MMMM-dd EEEE HH:mm:ss Z' }}</p>
+        </div>
+    
+    </div>
+
+    <script src="Factory/utility.js"></script>
+    <script src="Factory/controller.js"> </script>
+</body>
+
+</html>
